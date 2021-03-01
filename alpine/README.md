@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `ppc64le` builds of [the `alpine` official image](https://hub.docker.com/_/alpine) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,11 +26,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`20210212`, `edge`](https://github.com/alpinelinux/docker-alpine/blob/489953694b9dd165f615dc01971971ddf55701f8/x86_64/Dockerfile)
--	[`3.13.2`, `3.13`, `3`, `latest`](https://github.com/alpinelinux/docker-alpine/blob/0c341bcc2af7aa18139c5dff7f29a52fe279c4b1/x86_64/Dockerfile)
--	[`3.12.4`, `3.12`](https://github.com/alpinelinux/docker-alpine/blob/2f3c3015951938c521e752899a92ecd618e0c05b/x86_64/Dockerfile)
--	[`3.11.8`, `3.11`](https://github.com/alpinelinux/docker-alpine/blob/5818e51b0fec24d2ba8789a93fa23c9c89b662f9/x86_64/Dockerfile)
--	[`3.10.6`, `3.10`](https://github.com/alpinelinux/docker-alpine/blob/f5d7605e90bbd6f26efadaaa2a28ceb046dc8772/x86_64/Dockerfile)
+-	[`20210212`, `edge`](https://github.com/alpinelinux/docker-alpine/blob/489953694b9dd165f615dc01971971ddf55701f8/ppc64le/Dockerfile)
+-	[`3.13.2`, `3.13`, `3`, `latest`](https://github.com/alpinelinux/docker-alpine/blob/0c341bcc2af7aa18139c5dff7f29a52fe279c4b1/ppc64le/Dockerfile)
+-	[`3.12.4`, `3.12`](https://github.com/alpinelinux/docker-alpine/blob/2f3c3015951938c521e752899a92ecd618e0c05b/ppc64le/Dockerfile)
+-	[`3.11.8`, `3.11`](https://github.com/alpinelinux/docker-alpine/blob/5818e51b0fec24d2ba8789a93fa23c9c89b662f9/ppc64le/Dockerfile)
+-	[`3.10.6`, `3.10`](https://github.com/alpinelinux/docker-alpine/blob/f5d7605e90bbd6f26efadaaa2a28ceb046dc8772/ppc64le/Dockerfile)
+
+[![ppc64le/alpine build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/alpine.svg?label=ppc64le/alpine%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/alpine/)
 
 # Quick reference (cont.)
 
@@ -62,7 +66,7 @@ WARNING:
 Use like you would any other base image:
 
 ```dockerfile
-FROM alpine:3.7
+FROM ppc64le/alpine:3.7
 RUN apk add --no-cache mysql-client
 ENTRYPOINT ["mysql"]
 ```
